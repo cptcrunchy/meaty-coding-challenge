@@ -16,4 +16,12 @@ const getSumOfSequence = (start, finish, step) => {
        return sum.reduce(addNumbers)//?
 }
 
-getSumOfSequence(4, 10, 5) //?
+// getSumOfSequence(4, 10, 5) //?
+
+const doesStringContainKeyWord = (str) => {
+    const PhraseRegex = /(english)+/gi;
+    return PhraseRegex.test(str)
+}
+
+doesStringContainKeyWord("SMFEnglishasnD")//?
+doesStringContainKeyWord("FaagdnglishAGG")//?
