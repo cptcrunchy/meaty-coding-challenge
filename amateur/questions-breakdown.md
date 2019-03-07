@@ -68,3 +68,33 @@ whether or not the string contains the whole word "english". The order of chract
 
    **Input**: "SMFEnglishasnD"
    **Output**: true
+
+## Question 3
+
+Given an array of integers, write a function that returns an array of 2 integers. The first
+integer will be the count of the positive integers, and the second integer will be the sum of
+the negative integers. If the input is empty or null, return an empty array.
+
+---
+
+### Question 3 Break Down
+
+---
+    So this question we need to separate the array into two different arrays. One array with
+    all the positive numbers and the other with all the negative numbers. We can then reuse
+    the helper function that adds up the numbers from Question 1 for each new array.
+
+    Then we create a new array from the SUM of the total from the previous 2 arrays.
+
+    The trick here is to use a method that can help determine whether a number is positive
+    or negative. We will compare each number and determine if it is greater than or less than
+    0. We can also use another array helper function: [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+---
+
+### Question 3 Example
+
+   **Input**: "FaagdnglishAGG"
+   **Output**: false
+
+   **Input**: "SMFEnglishasnD"
+   **Output**: true

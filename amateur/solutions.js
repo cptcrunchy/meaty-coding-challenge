@@ -1,8 +1,8 @@
-// Challenge 1
 // This is a helper function to get the sum of values in an array of integers
 const addNumbers = (a, b) => a + b
 
 
+// Challenge 1
 const getSumOfSequence = (start, finish, step) => {
     // we use an empty array to be able to collect the value
     // of start as it increases   
@@ -23,5 +23,14 @@ const doesStringContainKeyWord = (str) => {
     return PhraseRegex.test(str)
 }
 
-doesStringContainKeyWord("SMFEnglishasnD")//?
-doesStringContainKeyWord("FaagdnglishAGG")//?
+// doesStringContainKeyWord("SMFEnglishasnD")//?
+// doesStringContainKeyWord("asdneglihsth")//?
+
+
+const getArraySumOfPositiveAndNegativeNums = (arrayOfNums) => {
+    const [posNum, negNum] = arrayOfNums.reduce(([p,n], e) => (e > 0 ? [[...p,e],n] : [p,[...n, e]]), [[],[]])
+    const countOfPosNums = posNum.length , sumOfNegNums = negNum.reduce(addNumbers)
+    return [countOfPosNums,sumOfNegNums]
+}
+
+getArraySumOfPositiveAndNegativeNums([1,-6,5,4,3,-7,-10,201,-3])//?
