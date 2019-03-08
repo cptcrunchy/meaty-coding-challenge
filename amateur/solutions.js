@@ -28,9 +28,21 @@ const doesStringContainKeyWord = (str) => {
 
 
 const getArraySumOfPositiveAndNegativeNums = (arrayOfNums) => {
-    const [posNum, negNum] = arrayOfNums.reduce(([p,n], e) => (e > 0 ? [[...p,e],n] : [p,[...n, e]]), [[],[]])
+    // First check if parameter is an array
+    if (!Array.isArray(arrayOfNums)) return []
+
+    // We are using the rest and spread operator for line 35.
+    // The reduce method uses a callback function which passes an array with 2 values, p (short for positive) and n (short for negative)
+    // And each value in the arrayOfNums to be evaluated.
+    const [posNum, negNum] = arrayOfNums.reduce(([p,n], e) => (e > 0 ? 
+        // If the value is greater than 0 then we add it to the posNum array
+        [[...p,e],n] :
+        // Else we add it to the negNum array. We then initiate them with a two dimensional array or an array of arrays.
+        [p,[...n, e]]), [[],[]])
+    // The quesion wants the count of positive numbers and the SUM of the negative numbers.
+    // If you got this question wrong, it was because of this simple oversight.
     const countOfPosNums = posNum.length , sumOfNegNums = negNum.reduce(addNumbers)
     return [countOfPosNums,sumOfNegNums]
 }
 
-getArraySumOfPositiveAndNegativeNums([1,-6,5,4,3,-7,-10,201,-3])//?
+getArraySumOfPositiveAndNegativeNums([-1,1,2,-3,5,2,-10])//?
