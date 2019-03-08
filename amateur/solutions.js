@@ -57,5 +57,14 @@ const getArrayCountOfPositiveAndSumNegativeNums = (arrayOfNums) => {
     return [countOfPosNums,sumOfNegNums]
 }
 
-getArrayCountOfPositiveAndSumNegativeNums([-1,1,2,-3,5,2,-10])//?
+// getArrayCountOfPositiveAndSumNegativeNums([-1,1,2,-3,5,2,-10])//?
 
+const getCharCountsOfString = (str, separator) => {
+    let counts = []
+    for (let i = 0; i < str.length; i++) {
+        counts.push(str.length - str.replace(new RegExp(str[i],"g"), '').length);
+    }
+    return counts.join(separator)
+} 
+
+getCharCountsOfString("challenge","-")//?
