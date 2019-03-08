@@ -112,7 +112,11 @@ individual number with a different character.
 ### Question 4 Break Down
 
 ---
-    
+    So my thoughts on this is to loop through the string. We then could use a Regular Expression
+    to count the instances of each character, remember that white spaces count, at that position.
+    Each count of the character can be pushed to an array. Similar to the questions before. We need
+    the use of a helper function for this. Finally we output the count for each letter at that position
+    and concat the separator.
 ---
 
 ### Question 4 Example

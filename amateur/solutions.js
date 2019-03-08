@@ -35,7 +35,7 @@ const doesStringContainKeyWord = (str) => {
 // doesStringContainKeyWord("asdneglihsth")//?
 
 // Challenge 3
-const getArraySumOfPositiveAndNegativeNums = (arrayOfNums) => {
+const getArrayCountOfPositiveAndSumNegativeNums = (arrayOfNums) => {
     // First check if parameter is an array
     if (!Array.isArray(arrayOfNums)) return []
 
@@ -57,6 +57,5 @@ const getArraySumOfPositiveAndNegativeNums = (arrayOfNums) => {
     return [countOfPosNums,sumOfNegNums]
 }
 
-getArraySumOfPositiveAndNegativeNums([-1,1,2,-3,5,2,-10])//?
-
+getArrayCountOfPositiveAndSumNegativeNums([-1,1,2,-3,5,2,-10])//?
 
