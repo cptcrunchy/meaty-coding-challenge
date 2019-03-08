@@ -82,13 +82,15 @@ the negative integers. If the input is empty or null, return an empty array.
 ---
     So this question we need to separate the array into two different arrays. One array with
     all the positive numbers and the other with all the negative numbers. We can then reuse
-    the helper function that adds up the numbers from Question 1 for each new array.
+    the helper function that adds up the numbers from Question 1 for the new array with the
+    negative numbers.
 
-    Then we create a new array from the SUM of the total from the previous 2 arrays.
+    Then we create a new array from the SUM of the negative numbers array and the count of
+    positive numbers from the positive numbers array.
 
     The trick here is to use a method that can help determine whether a number is positive
     or negative. We will compare each number and determine if it is greater than or less than
-    0. We can also use another array helper function: [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+    0. We can also use another array helper function: [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 ---
 
 ### Question 3 Example
